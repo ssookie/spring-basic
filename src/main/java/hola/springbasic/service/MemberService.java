@@ -9,10 +9,15 @@ import java.util.Optional;
 
 public class MemberService {
 
-    /**
-     * 회원 서비스가 메모리 회원 리포지토리를 직접 생성하게 함.
-     */
-    private final MemberRepository memberRepository = new MemoryMemberRepository();
+    // 회원 서비스가 메모리 회원 리포지토리를 직접 생성하게 함.
+    // private final MemberRepository memberRepository = new MemoryMemberRepository();
+    private final MemberRepository memberRepository;
+
+    // Constructor 생성 - 직접 new 로 생성하는 것이 아니라, 외부에서 넣어주도록 함.
+    // Dependency Injection (DI)
+    public MemberService(MemberRepository memberRepository) {
+        this.memberRepository = memberRepository;
+    }
 
     /**
      * 회원 가입
