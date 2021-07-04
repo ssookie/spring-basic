@@ -9,7 +9,6 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 import java.util.Optional;
 
-@Service
 public class MemberService {
 
     // 회원 서비스가 메모리 회원 리포지토리를 직접 생성하게 함.
@@ -18,7 +17,6 @@ public class MemberService {
 
     // Constructor 생성 - 직접 new 로 생성하는 것이 아니라, 외부에서 넣어주도록 함.
     // Dependency Injection (DI)
-    @Autowired
     public MemberService(MemberRepository memberRepository) {
         this.memberRepository = memberRepository;
     }
