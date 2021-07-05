@@ -11,27 +11,27 @@ buildscript {
 }
 
 plugins {
-	id 'org.springframework.boot' version '2.5.1'
-	// id 'io.spring.dependency-management' version '1.0.11.RELEASE'
-	id 'java'
+    id 'org.springframework.boot' version '2.5.1'
+    // id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+    id 'java'
 }
 
-apply plugin: "io.spring.dependency-management"
+apply plugin: "io.spring.dependency-management" // 스프링 부트의 의존성을 관리해주는 플러그인
 
 group = 'hola'
 version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '11'
 
-repositories {
-	mavenCentral()	// 공개된 사이트에서 라이브러리 받아옴.
+repositories {  // 의존성(라이브러리)를 어떤 원격 저장소에서 받을지 정함.
+    mavenCentral()	// 공개된 사이트에서 라이브러리 받아옴.
 }
 
-dependencies {
-	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
-	implementation 'org.springframework.boot:spring-boot-starter-web'
-	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+dependencies {  // 프로젝트 개발에 필요한 의존성 선언
+    implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
 
 test {
-	useJUnitPlatform()
+    useJUnitPlatform()
 }
