@@ -1,7 +1,14 @@
 package hola.springbasic.domain;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity // JPA가 관리하는 Entity가 됨.
 public class Member {
 
+    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)// PK 맵핑
     private Long id;
     private String name;
 

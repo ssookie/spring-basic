@@ -1,4 +1,4 @@
-package hola.springbasic.Controller;
+package hola.springbasic.controller;
 
 import hola.springbasic.domain.Member;
 import hola.springbasic.service.MemberService;
@@ -19,6 +19,7 @@ public class MemberController {
     @Autowired // 생성자 호출시 Autowired → 스프링이 스프링 컨테이너에 있는 memberService를 가져와서 연결시켜줌.
     public MemberController(MemberService memberService) {
         this.memberService = memberService;
+        System.out.println("memberService = " + memberService.getClass());
     }
 
     @GetMapping(value = "/members/new")
