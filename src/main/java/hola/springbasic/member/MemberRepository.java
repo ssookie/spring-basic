@@ -1,6 +1,6 @@
-package hola.springbasic.repository;
+package hola.springbasic.member;
 
-import hola.springbasic.domain.Member;
+import hola.springbasic.member.Member;
 
 import java.util.List;
 import java.util.Optional;

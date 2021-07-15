@@ -1,6 +1,7 @@
 package hola.springbasic.repository;
 
-import hola.springbasic.domain.Member;
+import hola.springbasic.member.Member;
+import hola.springbasic.member.MemberRepository;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Optional;

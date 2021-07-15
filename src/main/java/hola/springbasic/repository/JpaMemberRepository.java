@@ -1,6 +1,7 @@
 package hola.springbasic.repository;
 
-import hola.springbasic.domain.Member;
+import hola.springbasic.member.Member;
+import hola.springbasic.member.MemberRepository;
 
 import javax.persistence.EntityManager;
 import java.util.List;

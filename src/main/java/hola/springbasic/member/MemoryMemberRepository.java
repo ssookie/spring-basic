@@ -1,18 +1,18 @@
-package hola.springbasic.repository;
+package hola.springbasic.member;
 
-import hola.springbasic.domain.Member;
-import org.springframework.stereotype.Repository;
+import hola.springbasic.member.Member;
+import hola.springbasic.member.MemberRepository;
 
 import java.util.*;
 
 /**
  * 아직 데이터 저장소가 선정되지 않아서, 우선 인터페이스로 구현 클래스를 변경할 수 있도록 설계
  */
-public class MemoryMemberRepository implements MemberRepository{
+public class MemoryMemberRepository implements MemberRepository {
 
     // 동시성 문제가 고려되어 있지 않음, 실무에서는 ConcurrentHashMap, AtomicLong 사용 고려
     // 예제이므로 단순히 HashMap 사용
-    private static Map<Long, Member> store = new HashMap<>();
+    private static Map<Long, Member> store = new HashMap<>();   // 저장소 생성
     private static long sequence = 0L;
 
     @Override
