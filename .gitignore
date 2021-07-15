@@ -1,0 +1,7 @@
+# Compliled files
+/target/
+**/target
+
+# Gradle
+.gradle
+/build/
