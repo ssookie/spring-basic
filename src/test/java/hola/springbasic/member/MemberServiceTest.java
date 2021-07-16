@@ -1,13 +1,24 @@
 package hola.springbasic.member;
 
+import hola.springbasic.AppConfig;
 import org.assertj.core.api.Assertions;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import java.util.Optional;
 
 public class MemberServiceTest {
 
-    MemberService memberService = new MemberServiceImpl();
+    /**
+     * AppConfig 를 사용하도록 변경.
+     */
+    MemberService memberService; // = new MemberServiceImpl();
+
+    @BeforeEach
+    public void beforeEach() {
+        AppConfig appConfig = new AppConfig();
+        memberService = appConfig.memberService();
+    }
 
     @Test
     void join(){
