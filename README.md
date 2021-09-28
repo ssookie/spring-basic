@@ -15,7 +15,7 @@ Demo Project for inflearn-spring-basic-tutorial
 * doc/Chapter 11. 객체 지향 설계와 스프링
 * [doc/Chapter 12. 스프링 핵심 원리 이해1 - 예제 만들기](doc/12.스프링핵심원리이해1-예제만들기.md)
 * [doc/Chapter 13. 스프링 핵심 원리 이해2 - 객체 지향 원리 적용](doc/13.스프링핵심원리이해2-객체지향원리적용.md)
-* doc/Chapter 14. 스프링 컨테이너와 스프링 빈
+* [doc/Chapter 14. 스프링 컨테이너와 스프링 빈](doc/14.스프링컨테이너와스프링빈.md)
 * doc/Chapter 15. 싱글톤 컨테이너
 * doc/Chapter 16. 컴포넌트 스캔
 * doc/Chapter 17. 의존관계 자동 주입

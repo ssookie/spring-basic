@@ -23,6 +23,7 @@ public class MemberServiceTest {
 //        memberService = appConfig.memberService();
 //    }
 
+    // 스프링 컨테이너 생성!
     // annotation 기반으로 하여, AppConfig 클래스의 환경 설정 정보를 가지고 스프링 빈에 등록하겠다는 의미.
     ApplicationContext applicationContext = new AnnotationConfigApplicationContext(AppConfig.class);
     MemberService memberService = applicationContext.getBean("memberService", MemberService.class);
