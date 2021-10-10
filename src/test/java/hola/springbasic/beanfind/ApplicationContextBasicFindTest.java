@@ -34,7 +34,7 @@ class ApplicationContextBasicFindTest { // junit5 에서는 더이상 public이 
 
     @Test
     @DisplayName("인터페이스가 아닌, 구체 타입으로 조회")
-        // 구현에 의존하므로 유연성이 떨어짐.
+    // 구현에 의존하므로 유연성이 떨어짐.
     void findBeanByName2() {
         MemberServiceImpl memberService = ac.getBean("memberService", MemberServiceImpl.class);
         System.out.println("memberService === " + memberService);

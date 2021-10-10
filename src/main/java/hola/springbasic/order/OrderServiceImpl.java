@@ -6,7 +6,10 @@ import hola.springbasic.discount.RateDiscountPolicy;
 import hola.springbasic.member.Member;
 import hola.springbasic.member.MemberRepository;
 import hola.springbasic.member.MemoryMemberRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
+@Component
 public class OrderServiceImpl implements OrderService {
 
     // 구현체 생성 - MemoryMemberRepository 와 FixDiscountPolicy
@@ -18,6 +21,7 @@ public class OrderServiceImpl implements OrderService {
     // 인터페이스에만 의존하도록 코드 변경
     private final DiscountPolicy discountPolicy;
 
+    @Autowired
     public OrderServiceImpl(MemberRepository memberRepository, DiscountPolicy discountPolicy) {
         this.memberRepository = memberRepository;
         this.discountPolicy = discountPolicy;
