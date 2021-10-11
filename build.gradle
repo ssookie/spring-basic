@@ -22,6 +22,13 @@ group = 'hola'
 version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '11'
 
+// lombok 설정 추가
+configurations {
+    compileOnly {
+        extendsFrom annotationProcessor
+    }
+}
+
 repositories {  // 의존성(라이브러리)를 어떤 원격 저장소에서 받을지 정함.
     mavenCentral()	// 공개된 사이트에서 라이브러리 받아옴.
 }
@@ -33,6 +40,13 @@ dependencies {  // 프로젝트 개발에 필요한 의존성 선언
     implementation 'org.springframework.boot:spring-boot-starter-data-jpa' // 내부에 jdbc 관련 라이브러리를 포함하므로 jdbc는 제거해도 된다.
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
     runtimeOnly 'com.h2database:h2:1.4.197'  // h2 Database
+
+    // lombok settins starts
+    compileOnly 'org.projectlombok:lombok'
+    annotationProcessor 'org.projectlombok:lombok'
+    testCompileOnly 'org.projectlombok:lombok'
+    testAnnotationProcessor 'org.projectlombok:lombok'
+    // lombok setting ends
 }
 
 test {

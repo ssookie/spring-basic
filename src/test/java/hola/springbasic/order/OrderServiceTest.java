@@ -1,10 +1,8 @@
 package hola.springbasic.order;
 
 import hola.springbasic.AppConfig;
-import hola.springbasic.member.Grade;
-import hola.springbasic.member.Member;
-import hola.springbasic.member.MemberService;
-import hola.springbasic.member.MemberServiceImpl;
+import hola.springbasic.discount.DiscountPolicy;
+import hola.springbasic.member.*;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -26,4 +24,11 @@ public class OrderServiceTest {
         Order order = orderService.createOrder(memberId, "itemA", 1000);
         Assertions.assertThat(order.getDiscountPrice()).isEqualTo(1000);
     }
+
+//    @Test
+//    void fieldInjectionTest() {
+//        OrderServiceImpl orderService = new OrderServiceImpl();
+//        orderService.createOrder(1L, "itemA", 10000);
+//        // Bean named 'orderService' is expected to be of type 'hola.springbasic.order.OrderService' but was actually of type 'org.springframework.beans.factory.support.NullBean' 오류 발생
+//    }
 }

@@ -1,7 +1,11 @@
 package hola.springbasic;
 
+import hola.springbasic.discount.DiscountPolicy;
 import hola.springbasic.member.MemberRepository;
 import hola.springbasic.member.MemoryMemberRepository;
+import hola.springbasic.order.OrderService;
+import hola.springbasic.order.OrderServiceImpl;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
@@ -18,8 +22,8 @@ public class AutoAppConfig {
     // 기존의 AppConfig와는 다르게 @Bean으로 등록한 클래스가 하나도 없다!
 
     // [TEST] 수동 빈 등록 vs 자동 빈 등록에서 빈 이름이 충돌되면?
-    @Bean(name = "memoryMemberRepository")
-    public MemberRepository memberRepository() {
-        return new MemoryMemberRepository();
-    }
+//    @Bean(name = "memoryMemberRepository")
+//    public MemberRepository memberRepository() {
+//        return new MemoryMemberRepository();
+//    }
 }
